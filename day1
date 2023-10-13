@@ -1,0 +1,15 @@
+  Bypass Password Authentication for updating email and phone number - Security Vulnerability
+
+    Steps To Reproduce:
+(Add details for how we can reproduce the issue)
+With the assumption that the victim's twitter session is 'hijacked' and in a 'logged in' state for the hacker. The below steps must be followed In order to reproduce the security vulnerability.
+Security Vulnerability #1 - Update Victim's E-mail ID - Bypass password screen
+Go to Settings and Privacy -> Accounts
+Click on Email -> Update email address
+Enter any random password and Click on 'Next'
+Intercept the request the above request
+Copy the flow token up to :
+Forward client request to server and Intercept the response from server to this request
+Modify the Intercepted Server's Response with the below text please paste the flow token from step 5 below and remove the [square brackets]
+Forward the modified 'Server Response' to the client
+This will now bypass the password screen irrespective of It being a correct or Incorrect password - You must now 'Enter' your email ID and verify It In order to add the email ID to the victim's account
